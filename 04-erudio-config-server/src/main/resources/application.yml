@@ -1,0 +1,14 @@
+server:
+  port: 8888
+spring:
+  aplication:
+    name: erudio-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/BellaSuto/erudio-config-server
+          default-label: main
+          search-paths:
+            - 'greeting-service*'
+
