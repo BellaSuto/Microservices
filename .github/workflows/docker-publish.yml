@@ -29,11 +29,11 @@ jobs:
 
       - name: Build Eureka Naming Server Container Image
         working-directory: ./Dockerizing/10-naming-server
-        run: mvn spring-boot:build-image -DskipTests
+        run: docker build -t isasuto123/naming-server:0.0.1-SNAPSHOT .
 
       - name: Build API Gateway Container Image
         working-directory: ./Dockerizing/10-api-gateway
-        run: mvn spring-boot:build-image -DskipTests
+        run: docker build -t isasuto123/api-gateway:0.0.1-SNAPSHOT .
 
       - name: Build Cambio Microservice Jar
         working-directory: ./Dockerizing/10-cambio-service
