@@ -20,32 +20,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME}}
           password: ${{ secrets.DOCKER_PASSWORD}}
-          
-      - name: Setup Java JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-
-      - name: Build Eureka Naming Server Container Image
-        working-directory: ./Dockerizing/10-naming-server
-        run: docker build -t isasuto123/naming-server:0.0.1-SNAPSHOT .
-
-      - name: Build API Gateway Container Image
-        working-directory: ./Dockerizing/10-api-gateway
-        run: docker build -t isasuto123/api-gateway:0.0.1-SNAPSHOT .
-
-      - name: Build Cambio Microservice Jar
-        working-directory: ./Dockerizing/10-cambio-service
-        run: mvn clean package -DskipTests
-
-      - name: Build Book Microservice Jar
-        working-directory: ./Dockerizing/10-book-service
-        run: mvn clean package -DskipTests
-        
-      - name: Docker Compose Build
-        working-directory: ./Dockerizing
-        run: docker-compose build
       
 
      
