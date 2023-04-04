@@ -1,0 +1,8 @@
+br\com\erudio\proxy\CambioProxy.class
+br\com\erudio\controller\BookController.class
+br\com\erudio\Application.class
+br\com\erudio\controller\FooBarController.class
+br\com\erudio\model\Book.class
+br\com\erudio\configuration\OpenApiConfiguration.class
+br\com\erudio\repository\BookRepository.class
+br\com\erudio\response\Cambio.class
